@@ -1,9 +1,9 @@
 # TMM-structure-functions
 Structural analysis functions required for implementing Transfer Matrix Method with applied axial loading.
 
-> Please cite as: Chatterjee,  P. and Bryant,  M., Structural modelling of a compliant flexure flow energy harvester,  Smart Mater. Struct., vol. 24, no. 9, p. 0, 2015., https://doi.org/10.1088/0964-1726/24/9/094007
+> Please cite as: Chatterjee, P., & Bryant, M. (2019). Analysis of Tension-Tunable Clamped-Clamped Piezoelectric Beams for Harvesting Energy from Wind and Vibration, Journal of Intelligent Material Systems and Structures. https://doi.org/10.1177/1045389X19862390
 
-This repository is part of many others used to successully run the primary MATLAB code [Dr. Punnag Chatterjee](https://sites.google.com/view/punnagchatterjee/home) between 2009 and 2013 in the Mechanical Engineering department at Boston University (Prof. Barba since moved to the George Washington University).
+This repository is part of many others used to successully run the primary MATLAB code used during graduate studies by [Dr. Punnag Chatterjee](https://sites.google.com/view/punnagchatterjee/home).
 
 The structure of the MAIN (driver) code looks like this:
 
