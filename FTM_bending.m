@@ -1,9 +1,10 @@
 function [FTM]  = FTM_bending(w,x,EI,rhoA,T,type)
-%% CALCULATES THE INDIVIDUAL FIELD TRANSFER MATRIXES OF SECTIONS
+%% CALCULATES: FIELD TRANSFER MATRIX OF A BEAM SEGMENT IN BENDING
 % This is based on the paper cited below:
 % Chatterjee, P. and Bryant, M., Structural modelling of a compliant flexure flow energy harvester, 
 % Smart Mater. Struct., vol. 24, no. 9, p. 0, 2015.
 % https://doi.org/10.1088/0964-1726/24/9/094007
+
 %--------------------------------INPUT-------------------------------------
 % w    - symbolic variable for circular natural frequency
 % x    - symbolic variable for local beam length function
