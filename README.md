@@ -10,9 +10,13 @@ The structure of the MAIN (driver) code looks like this:
 **Step 1: Structural**
 
 a. reading geometry
+
 b. reading material
+
 c. structural simulation options
+
 d. geometry discretization
+
 e. structural module - evaluates mode shape and natural frequencies for bending/torsion
 
 **Step 2: Electromechanical**
@@ -22,7 +26,9 @@ electromechanical module - evaluates the piezo-mechanical coupling parameters
 **Step 3: Aerodynamic**
 
 a. aerodynamic simulation options
+
 b. geometry discretization
+
 c. structural module - evaluates mode shape and natural frequencies for bending/torsion
 
 **Step 4: Coupled - solution**
