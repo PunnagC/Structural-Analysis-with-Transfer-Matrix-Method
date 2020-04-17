@@ -27,9 +27,7 @@ electromechanical module - evaluates the piezo-mechanical coupling parameters
 
 a. aerodynamic simulation options
 
-b. geometry discretization
-
-c. structural module - evaluates mode shape and natural frequencies for bending/torsion
+b. creating aerodynamic matrices
 
 **Step 4: Coupled - solution**
 
