@@ -1,8 +1,9 @@
 function [FTM]  = FTM_bending(w,x,EI,rhoA,T,type)
 %% CALCULATES THE INDIVIDUAL FIELD TRANSFER MATRIXES OF SECTIONS
-    %Elements of FTM from WickenHeiser Paper
-    %Title: "Eigensolution of piezoelectric energy harvesters with
-    %geometric discontinuities: Analytical modeling and validation"
+% This is based on the paper cited below:
+% Chatterjee, P. and Bryant, M., Structural modelling of a compliant flexure flow energy harvester, 
+% Smart Mater. Struct., vol. 24, no. 9, p. 0, 2015.
+% https://doi.org/10.1088/0964-1726/24/9/094007
 %--------------------------------INPUT-------------------------------------
 % w    - symbolic variable for circular natural frequency
 % x    - symbolic variable for local beam length function
@@ -36,35 +37,11 @@ c1     = ((N^2/(N^2*M + M^3))*sinhMx + (M^2/(N^3 + N*M^2))*sinNx)/x;
 c2     = (1/(x^2*(N^2 + M^2)))*(coshMx - cosNx);
 c3     = ((1/(N^2*M + M^3))*sinhMx - (1/(N^3 + N*M^2))*sinNx) /x^3;
 
-% Betx = Bet*x;
-% c0 =      0.5      *(cosh(Betx) + cos(Betx));
-% c1 = (0.5/(Betx))  *(sinh(Betx) + sin(Betx));
-% c2 = (0.5/(Betx)^2)*(cosh(Betx) - cos(Betx));
-% c3 = (0.5/(Betx)^3)*(sinh(Betx) - sin(Betx));
-% 
 c0 = vpa(c0,5);
 c1 = vpa(c1,5);
 c2 = vpa(c2,5);
 c3 = vpa(c3,5);
 
-%% checking for high values
-% M_val = double(subs(M,[w,x],[100,dl]));
-% N_val = double(subs(N,[w,x],[100,dl]));
-% c0_val =(N_val^2*cosh(M_val*dl) + M_val^2*cos(N_val*dl))/(N_val^2 + M_val^2);
-% c0_val = double(c0_val);
-% c1_val = ((N_val^2/(N_val^2*M_val + M_val^3))*sinh(M_val*dl) + (M_val^2/(N_val^3 + N_val*M_val^2))*sin(N_val*dl))/dl;
-% c1_val = double(c1_val);
-% c2_val =(1/(dl^2*(N_val^2 + M_val^2)))*(cosh(M_val*dl) - cos(N_val*dl));
-% c2_val = double(c2_val);
-% c3_val =((1/(N_val^2*M_val + M_val^3))*sinh(M_val*dl) - (1/(N_val^3 + N_val*M_val^2))*sin(N_val*dl)) /dl^3;
-% c3_val = double(c3_val);
-% c_val = [c0_val, c1_val, c2_val, c3_val];
-% MN_val = [M_val, N_val];
-%% Normalizing values 
-% c0 = 1;
-% c1 = c1/c0;
-% c2 = c2/c0;
-% c3 = c3/c0;
 %% Elements of FTM Matrix
 F33 = c0;
 F34 = (T*c3*x^3)/EI + c1*x;
