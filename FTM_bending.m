@@ -1,10 +1,11 @@
 function [FTM]  = FTM_bending(w,x,EI,rhoA,T,type)
 %% CALCULATES: FIELD TRANSFER MATRIX OF A BEAM SEGMENT IN BENDING
 % This is based on the paper cited below:
-% Chatterjee, P., & Bryant, M. (2015). 
-% Transfer matrix modeling of a tensioned piezo-solar hybrid energy harvesting ribbon.  
-% Proc. SPIE 9431, Active and Passive Smart Structures and Integrated Systems 2015, 94310D. 
-% https://doi.org/10.1117/12.2086138.
+% Chatterjee, P., & Bryant, M. (2019). 
+% 'Analysis of Tension-Tunable Clamped-Clamped Piezoelectric Beams for 
+% Harvesting Energy from Wind and Vibration',
+% Journal of Intelligent Material Systems and Structures. 
+% https://doi.org/10.1177/1045389X19862390
 
 %--------------------------------INPUT-------------------------------------
 % w    - symbolic variable for circular natural frequency
