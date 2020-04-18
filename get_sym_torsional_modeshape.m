@@ -1,6 +1,17 @@
 function [PHI_shape_x] =  get_sym_torsional_modeshape(w_eval,w,FTM_x_w,FTM_x_w_B,x,l_s)
 %Mode_shape_calc_heave_V1(plot_freq,f,FTM_x_f,x,FTM_f,Li,divisions)
 %This function finds the mode shape corresponding to a natural frequency
+%----------------------------INPUT------------------------------------
+% w_eval
+% w
+% FTM_x_w
+% FTM_x_w_B
+% x
+% l_s
+
+%----------------------------OUTPUT------------------------------------
+% PHI_shape_x -  symbolic piexewise mode shape
+
 [nrow, ncol, ns] = size(FTM_x_w);
 % ns = length(l_seg);     %number of segments in the structure
 PHI_shape_x(1:ns) = sym(NaN);
