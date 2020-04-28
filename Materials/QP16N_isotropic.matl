@@ -1,0 +1,12 @@
+Structural
+Isotropic
+E1=67e9		%N/m^2, Young's modulus
+v=0.48361	%N/m^2, Young's modulus
+rho=7800	%Kg/m^3
+Electrical
+cE=67e9	%N/m^2, Young's modulus when E is 0
+d31=-190e-12	%m/V.piezoelectric charge coefficient
+eS=15.05e-9	%F/m, constant strain permittivity
+
+
+
